@@ -1165,24 +1165,11 @@ administration in a single platform.</p>
 <!-- ==============================
      VISITOR COUNTER
 =============================== -->
-<script>
-  const namespace = "chandan0393-portfolio";
-  const key = "visits";
-
-  window.addEventListener("DOMContentLoaded", () => {
-    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-      .then(res => res.json())
-      .then(data => {
-        const el = document.getElementById("visitor-count");
-        if (el) el.textContent = data.value;
-      })
-      .catch(err => {
-        console.error("Counter error:", err);
-        document.getElementById("visitor-count").textContent = "—";
-      });
-  });
+<script
+  data-goatcounter="https://chandan0393.github.io/chandan.portfolio.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js">
 </script>
-
 
 
 
