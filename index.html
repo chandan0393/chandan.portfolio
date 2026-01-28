@@ -51,6 +51,9 @@
                     <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="assets/Chandan_Kumar_Automation_Test_Engineer_4.10Yrs.pdf">Resume</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                 </li>
             </ul>
@@ -62,6 +65,8 @@
     <!--====================================================
                         ABOUT
     ======================================================-->
+
+
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
           <div class="my-auto" >
               <!-- <img src="img/logo-s.png" class="img-fluid mb-3" alt=""> -->
@@ -608,16 +613,6 @@ appropriate engineers.</p>
 </script>
       </section>
 
-        <!-- ==============================
-        VISITOR COUNTER
-        =============================== -->
-<section class="visitor-counter">
-  <h3>👀 Visitors</h3>
-  <p>
-    This portfolio has been visited by
-    <span id="visitor-count">0</span> people
-  </p>
-</section>
 
 <!-- .......................MAP..................... -->
       <section class=" d-flex flex-column" id="maps">
@@ -1147,25 +1142,35 @@ administration in a single platform.</p>
             });
 
         });
-    </script> 
-    <!--.......... visitors count......... -->
-    <script>
-  const namespace = "chandan0393-portfolio"; // must be UNIQUE
+        
+  const namespace = "chandan0393-portfolio";
   const key = "visits";
 
-  // 1️⃣ Create counter if it doesn't exist
-  fetch(`https://api.countapi.xyz/create?namespace=${namespace}&key=${key}&value=0`)
-    .then(() => {
-      // 2️⃣ Increment counter
-      return fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
-    })
-    .then(response => response.json())
+  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+    .then(res => res.json())
     .then(data => {
       document.getElementById("visitor-count").innerText = data.value;
     })
-    .catch(err => console.error("Visitor counter error:", err));
-</script>
-<!--.......... visitors count......... -->
+    .catch(err => console.error(err));
+
+    </script> 
+
+          <!-- ==============================
+        VISITOR COUNTER
+        =============================== -->
+<!-- <section class="visitor-counter">
+  <h3>👀 Visitors</h3>
+  <p>
+    This portfolio has been visited by
+    <span id="visitor-count">0</span> people
+  </p> -->
+
+  <div class="visitor-box">
+  <h2>Total Visitors</h2>
+  <div id="visitor-count">0</div>
+</div>
+
+</section>
 </body>
 
 </html>
