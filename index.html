@@ -1142,17 +1142,6 @@ administration in a single platform.</p>
             });
 
         });
-        
-  const namespace = "chandan0393-portfolio";
-  const key = "visits";
-
-  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById("visitor-count").innerText = data.value;
-    })
-    .catch(err => console.error(err));
-
     </script> 
 
           <!-- ==============================
@@ -1171,6 +1160,18 @@ administration in a single platform.</p>
 </div>
 
 </section>
+<script>
+  const namespace = "chandan0393-portfolio";
+  const key = "visits";
+
+  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("visitor-count").innerText = data.value;
+    })
+    .catch(err => console.error(err));
+</script>
+
 </body>
 
 </html>
