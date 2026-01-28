@@ -1153,24 +1153,38 @@ administration in a single platform.</p>
     This portfolio has been visited by
     <span id="visitor-count">0</span> people
   </p> -->
-
-  <div class="visitor-box">
-  <h2>Total Visitors</h2>
-  <div id="visitor-count">0</div>
-</div>
-
 </section>
+
+<section class="visitor-counter">
+  <div class="visitor-box">
+    <h2>Total Visitors</h2>
+    <div id="visitor-count">0</div>
+  </div>
+</section>
+
+<!-- ==============================
+     VISITOR COUNTER
+=============================== -->
 <script>
-  const namespace = "chandan.portfolio";
+  const namespace = "chandan0393-portfolio";
   const key = "visits";
 
-  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById("visitor-count").innerText = data.value;
-    })
-    .catch(err => console.error(err));
+  window.addEventListener("DOMContentLoaded", () => {
+    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+      .then(res => res.json())
+      .then(data => {
+        const el = document.getElementById("visitor-count");
+        if (el) el.textContent = data.value;
+      })
+      .catch(err => {
+        console.error("Counter error:", err);
+        document.getElementById("visitor-count").textContent = "—";
+      });
+  });
 </script>
+
+
+
 
 </body>
 
