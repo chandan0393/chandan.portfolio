@@ -54,7 +54,7 @@ a:active {
 /* =========================
    THEME VARIABLES
 ========================= */
-:root {
+/* :root {
   color-scheme: light;
 }
 
@@ -79,7 +79,7 @@ a:active {
 }
 
 /* Hover */
-.theme-toggle:hover {
+/* .theme-toggle:hover {
   transform: scale(1.1);
 }
 
@@ -87,16 +87,16 @@ body {
   background-color: #ffffff;
   color: #111111;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
+} */
 
 /* Dark mode (applied only when toggled) */
-body.dark {
+/* body.dark {
   background-color: #0f172a;
   color: #e5e7eb;
-}
+} */
 
 
-:root {
+/* :root {
   --bg-color: #0f2027;
   --text-color: #ffffff;
   --card-bg: #1c2b33;
@@ -108,12 +108,12 @@ body.dark {
   --text-color: #111111;
   --card-bg: #ffffff;
   --accent: #0077ff;
-}
+} */ */
 
 /* =========================
    APPLY THEME
 ========================= */
-body {
+/* body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background 0.4s ease, color 0.4s ease;
@@ -124,7 +124,7 @@ section,
 .card,
 .resume-section {
   background-color: var(--bg-color);
-}
+} */
 
 
 /*==================================================
