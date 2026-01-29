@@ -55,6 +55,48 @@ a:active {
    THEME VARIABLES
 ========================= */
 :root {
+  color-scheme: light;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+
+  background: transparent;
+  color: #111;
+  font-size: 18px;
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+}
+
+/* Hover */
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+body {
+  background-color: #ffffff;
+  color: #111111;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode (applied only when toggled) */
+body.dark {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+
+:root {
   --bg-color: #0f2027;
   --text-color: #ffffff;
   --card-bg: #1c2b33;
@@ -84,30 +126,6 @@ section,
   background-color: var(--bg-color);
 }
 
-/* =========================
-   THEME TOGGLE BUTTON
-========================= */
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 25px;
-  font-size: 10px;
-  background: var(--card-bg);
-  color: var(--text-color);
-  border: none;
-  padding: 10px 14px;
-  border-radius: 30%;
-  cursor: pointer;
-  z-index: 999;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
-}
-
-.theme-toggle:hover {
-  transform: rotate(20deg) scale(1.1);
-  background: var(--accent);
-  color: #fff;
-}
 
 /*==================================================
                   SOCIAL-ICON
