@@ -263,19 +263,6 @@ section,
   .text-primary {
       color: #2196f3 !important;
   }
-/* =========================
-   BANNER WRAPPER
-========================= */
-.banner-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Ensure banner stays below video */
-.banner-existing {
-  position: relative;
-  z-index: 1;
-}
 
 /*==================================================
                       ABOUT
