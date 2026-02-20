@@ -58,11 +58,43 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                 </li>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                                            <!-- 🎵 Music Widget -->
+                <div class="music-widget">
+                  <button id="prev">⏮</button>
+                  <button id="play">▶</button>
+                  <button id="next">⏭</button>
+                  <audio id="audio"></audio>
+                </div>
             </ul>
+
         </div>
     </nav>
 
     <div class="container-fluid p-0">
+
+      <!--///////////////////////Date////////////////////-->
+<div class="portfolio-date">
+  <span id="portfolioDate"></span>
+</div>
+
+<script>
+  const el = document.getElementById("portfolioDate");
+  const now = new Date();
+
+  el.textContent = now.toLocaleDateString(undefined, {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric"
+  });
+</script>
+
+
 
                 <!-- Theme Toggle Button -->
 <!-- <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
@@ -1172,9 +1204,57 @@ administration in a single platform.</p>
 <!-- ==============================
      VISITOR COUNTER
 =============================== -->
-<img src="https://visitor-badge.laobi.icu/badge?page_id=chandan0393.chandan.portfolio"
+<!-- <img src="https://visitor-badge.laobi.icu/badge?page_id=chandan0393.chandan.portfolio"
      alt="Total Visitors">
 
 </body>
 
-</html>
+</html> -->
+
+
+<!--  -->
+<!-- Desktop Icon -->
+<!----------------------- Music----------- -->
+
+<!-- your music player HTML here -->
+
+<script>
+const tracks = [
+  "music/Golden_Brown.mp3",
+  "music/LUZ_ROJA_Slowed.mp3",
+  "music/song3.mp3"
+];
+
+let index = 0;
+const audio = document.getElementById("audio");
+const play = document.getElementById("play");
+const next = document.getElementById("next");
+const prev = document.getElementById("prev");
+
+audio.src = tracks[index];
+
+play.onclick = () => {
+  if (audio.paused) {
+    audio.play();
+    play.textContent = "⏸";
+  } else {
+    audio.pause();
+    play.textContent = "▶";
+  }
+};
+
+next.onclick = () => {
+  index = (index + 1) % tracks.length;
+  audio.src = tracks[index];
+  audio.play();
+  play.textContent = "⏸";
+};
+
+prev.onclick = () => {
+  index = (index - 1 + tracks.length) % tracks.length;
+  audio.src = tracks[index];
+  audio.play();
+  play.textContent = "⏸";
+};
+</script>
+
